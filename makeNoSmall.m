@@ -9,7 +9,11 @@ else
     
 for i = 1:r
     if (abs(d(i)) < border)
-        d(i) = d(i) / abs(d(i)) * border;
+        if (d(i) ~= 0)
+            d(i) = d(i) / abs(d(i)) * border;
+        else
+            d(i) = border;
+        end;
     end;
 end;
 

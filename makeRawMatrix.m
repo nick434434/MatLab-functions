@@ -8,6 +8,8 @@ d = fft(C(:, 1));
 if gcd(k, r(2)) ~= 1
     m = gcd(k, r(2));
     step = k / m;
+else
+    m = 1;
 end;
 
 if mode == 1

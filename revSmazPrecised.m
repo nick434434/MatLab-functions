@@ -7,7 +7,8 @@ if (gcd(k, r(2)) == 1)
     C = ciklsmaz(k, r(2));
     C = Circulant(revertcirculant(C(:, 1)));
     R = double(S0);
-    R = uint8to16(R*C);
+    R = uint16to8(R*C);
+    R = uint8(R);
 end;
 
 
